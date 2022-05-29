@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tareas</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Lato Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap" rel="stylesheet" />
+
+    <!-- Custom JS -->
+    <script src="script.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <div class="list roundBorder">
+        <div class="date">
+            <!-- Info de Fecha -->
+            <div class="dateLeft">
+                <div id="dateNumber"></div>
+                <div>
+                    <div id="dateMonth"></div>
+                    <div id="dateYear"></div>
+                </div>
+            </div>
+            <div id="dateText"></div>
+        </div>
+        <form onsubmit="addNewTask(event)">
+            <!-- Agregar el evento de cada dia -->
+            <input type="text" name="taskText" autocomplete="off" id="task" placeholder="Add new Task" class="roundBorder" />
+            <button type="submit" class="addTaskButton">+</button>
+            <button class="orderButton roundBorder" type="button" onclick="renderOrderedTasks()">
+          organize
+        </button>
+        </form>
+        <div id="tasksContainer"></div>
+    </div>
+</body>
+
+</html>
