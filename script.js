@@ -10,8 +10,8 @@ const taskContainer = document.getElementById("tasksContainer");
 const setDate = () => {
     const date = new Date();
     dateNumber.textContent = date.toLocaleString("es-ES", { day: "numeric" });
-    dateText.textContent = date.toLocaleString("es-ES", { weekday: "long" });
-    dateMonth.textContent = date.toLocaleString("es-ES", { month: "short" });
+    dateText.textContent = date.toLocaleString("en", { weekday: "long" });
+    dateMonth.textContent = date.toLocaleString("en", { month: "short" });
     dateYear.textContent = date.toLocaleString("es-ES", { year: "numeric" });
 };
 
